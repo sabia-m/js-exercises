@@ -28,12 +28,17 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
-let myButton = document.querySelector("#alertBtn");
+let myButton = document.querySelector("#alertBtn"); //- with function name
     myButton.addEventListener("click", msgAlert);
 
     function msgAlert() {
         alert("Thank you for visiting Bikes for Refugees");
     }
+
+    // let myButton = document.querySelector("#alertBtn"); 
+    // myButton.addEventListener("click",function(){   // remove function name - function name not alert needed for shorter functions, which are easy to read + figure out their use
+    // ("Thank you for visiting Bikes for Refugees"); 
+    // }
 
 /*
 Task 3
@@ -68,6 +73,19 @@ function alertText() {
 }
 
 /*
+let addTextBtn = document.querySelector("#addTextBtn"); - alt way to do task 4
+addTextBtn.addEventListener("click", addParagraph);
+let paragraph = document.createElement("p");
+paragraph.innerText = "Read more below.";
+paragraph.style.color = "red";
+paragraph.style.fontSize = "4em";
+let myParentElement = document.querySelector(".buttons");
+function addParagraph() {
+ myParentElement.appendChild(paragraph);
+}
+*/
+
+/*
 Task 5
 ======
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
@@ -81,4 +99,7 @@ function largeLinks() {
     for (let i=0; i < gettingLinks.length; i++) {
         gettingLinks[i].style.fontSize = "30px"
     }
+
+//gettingLinks.forEach(e => e.style.fontSize = "30px") - can be used instead of using the for loop
 }
+
