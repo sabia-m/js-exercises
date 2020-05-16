@@ -80,6 +80,7 @@ function render() {
       readStatus = "Yes";
     } else {
       readStatus = "No";
+      changeBut.style.backgroundColor = "red"
     }
     changeBut.innerHTML = readStatus;
 
